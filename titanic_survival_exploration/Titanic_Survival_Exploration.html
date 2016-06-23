@@ -13253,7 +13253,11 @@ Make sure to keep track of the various features and conditions you tried before 
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer</strong>: Predictions have an accuracy of 80.36%.</p>
+<p><strong>Answer</strong>:<br>
+1) I looked at Pclass, Sex, Age, SibSp, and Parch.</p>
+<p>2) The Pclass feature seems to contain useful information as when Pclass equals 3 the survival rate of females is lower than normal. So I further split the female passengers of Pclass 3 by their ages and found that the number of survival rate is less than 50% when age is above 30, therefore we can predict passengers in such condition as <em>did not survive</em> instead to increase accuracy.</p>
+<p>3) So on top of the previous conditions in Q3, I added "for female passengers from Pclass 3 whose age is above 30, predict her as <em>did not survive</em>", and got an accuracy over 80%.</p>
+<p>4) Predictions have an accuracy of 80.36%.</p>
 
 </div>
 </div>
